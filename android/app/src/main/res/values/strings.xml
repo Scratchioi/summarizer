@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Summarize</string>
+    <string name="source_type">Source Type</string>
+    <string name="paste_transcript">Paste transcript</string>
+    <string name="select_video">select video</string>
+    <string name="select_audio">select audio</string>
+    <string name="ic_play_string">play</string>
+    <string name="ic_pause_string">pause</string>
+    <string name="select_media">select media</string>
+    <string name="ffmpeg_unsupported">Video summarizing not supported!</string>
+    <string name="ffmpeg_init_failed">Couldn\'t perform video summarizing</string>
+    <string name="convert_video">convert video</string>
+    <string name="started_conversion">Started conversion</string>
+    <string name="ready_for_conversion">Ready for conversion</string>
+</resources>

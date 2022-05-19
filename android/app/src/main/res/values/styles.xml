@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="SourceCard" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/_20dp</item>
+    </style>
+
+    <style name="RoundCorner" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerRadius">@dimen/_8dp</item>
+    </style>
+</resources>

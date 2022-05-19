@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:duration="4000"
+        android:propertyName="pathData"
+        android:valueFrom="@string/ic_play_string"
+        android:valueTo="@string/ic_pause_string"
+        android:valueType="pathType" />
+</set>
