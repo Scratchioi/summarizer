@@ -56,6 +56,7 @@ class SourceActivity : Activity()
     }
 
     private fun getTextSummary() {
+        sourceBinding.media.text = "Waiting for server response"
         apiClass.getSummary(
             text = sourceBinding.transcriptInputText.text.toString(),
             onComplete = object: ApiInterface {
@@ -71,6 +72,7 @@ class SourceActivity : Activity()
     }
 
     private fun getMediaSummary(part_file: String, ext: String) {
+        sourceBinding.media.text = "Waiting for server response"
         apiClass.getSummaryFromFile(
             part_file,
             ext,
@@ -92,6 +94,7 @@ class SourceActivity : Activity()
         sourceBinding.divider.visibility = View.GONE
         sourceBinding.selectMediaButton.visibility = View.GONE
         Log.d("Source", text)
+        sourceBinding.media.text = "Summary"
         sourceBinding.summary.text = text
         sourceBinding.summary.visibility = View.VISIBLE
         sourceBinding.summarizeButton.text = "Clear"
@@ -105,6 +108,7 @@ class SourceActivity : Activity()
         sourceBinding.selectMediaButton.visibility = View.VISIBLE
         sourceBinding.summary.visibility = View.GONE
         sourceBinding.summarizeButton.text = "Summarize"
+        sourceBinding.media.text = ""
         sourceBinding.summarizeButton.setOnClickListener {
             getTextSummary()
         }
@@ -121,6 +125,7 @@ class SourceActivity : Activity()
                 cursor.moveToFirst()
                 val indexImage: Int = cursor.getColumnIndex(imageProjection[0])
                 part_file = cursor.getString(indexImage)
+                sourceBinding.media.text = "Media selected"
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R && !Environment.isExternalStorageManager()) {
                     Snackbar.make(sourceBinding.root, "Storage permission required", Snackbar.LENGTH_INDEFINITE)
                         .setAction("Allow") {
